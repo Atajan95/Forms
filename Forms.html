@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="php/registration.php" name="form_name" autocomplete="off">
+      <fieldset>
+        <legend>Регистрационная форма пользователя</legend>
+        <br /><br />
+        <label
+          >Имя:
+          <input
+            type="text"
+            placeholder="Ivan"
+            title="suka"
+            name="first_name"
+            autocomplete="on" /></label
+        ><br /><br />
+        <label
+          >Фамилия:
+          <input
+            type="text"
+            placeholder="ivanov"
+            title="da,da, ty suka"
+            name="last_name"
+            autocomplete="on" /></label
+        ><br /><br />
+        <label for="age">Укажите возраст: 
+          <input type="number" min="18" max="45" required><br><br>
+        </label>
+        Укажите пол:
+        <label
+          >мужской<input type="radio" name="sex" value="man" checked
+        /></label>
+        <label>женский<input type="radio" name="sex" value="woman" /></label
+        ><br /><br />
+        <label for="country">Страна проживания:</label>
+        <select name="country" id="country-select" required>
+          <label for="country-select"></label>
+          <option>Российская Федерация</option>
+          <option>Республика Беларусь</option>
+          <option>Другое</option></select
+        ><br /><br />
+        Владение языками:
+        <label>русский<input type="checkbox" name="lang" value="ru" /></label>
+        <label
+          >белорусский<input type="checkbox" name="lang" value="bel"
+        /></label>
+        <label>английский<input type="checkbox" name="lang" value="en" /></label
+        ><br /><br />
+        Фото профиля:
+        <input type="file" name="file" id="file"/><br /><br />
+        Ваш логин:
+        <input type="text" name="login" /><br /><br />
+        Ваш пароль:
+        <input type="password" /><br /><br />
+        Повторите пароль:
+        <input type="password" /><br /><br />
+      </fieldset>
+      <br /><br />
+      <div>
+        <button type="reset">Сброс</button>
+        <button type="send">Отправить</button>
+      </div>
+    </form>
+    <hr />
+    <br /><br /><br /><br />
+    
+        <form
+          action="php/registration.php"
+          method="POST"
+          name="reg_form"
+          autocomplete="off"
+        >
+          <fieldset>
+            <legend>Регистрационная форма пользователя</legend>
+            <br />
+            <label>Имя: <input type="text" name="first_name" list="n_1" /> </label
+            ><br /><br /><datalist id="n_1">
+              <option value="Вася"></option>
+              <option value="Петя"></option>
+              <option value="Катя"></option>
+              <option value="Лена"></option>
+            </datalist>
+            <label>Фамилия: <input type="text" name="last_name" /></label>
+            <br /><br />
+            Укажите пол: &nbsp;<label>мужской <input type="radio" name="sex" value="man"
+            /></label>
+            &nbsp;<label>
+              женский <input type="radio" name="sex" value="woman"
+            /></label>
+            <br /><br /><label for="country">Страна проживания:</label> &nbsp;
+            <select name="country" id="country">
+              <option value="1">Беларусь</option>
+              <option value="2">Российская Федерация</option>
+              <option value="3">Другое государство</option></select
+            ><br /><br />
+             Владение языками: &nbsp;<label
+              >русский <input type="checkbox" name="ru" value="ru"
+            /></label>
+            &nbsp;
+            <label
+              >белорусский<input type="checkbox" name="bel" value="bel" />
+            </label>
+            &nbsp;<label
+              >английский <input type="checkbox" name="en" value="en" /></label
+            ><br /><br />
+            <label
+              >Фото профиля:  &nbsp;
+              <input type="file" name="profile_foto" /> </label
+            ><br /><br />
+            <label
+              >Введите логин:  &nbsp; <input type="text" name="login"
+            /></label>
+            <br /><br /><label
+              >Введите пароль:  &nbsp;
+              <input type="password" name="password" /></label
+            ><br /><br />
+            <label
+              >Повторите пароль:  &nbsp;
+              <input type="password" name="repeat_pass"
+            /></label>
+            <br />
+          </fieldset>
+          <br />
+          <input type="reset" value="Сброс" />  &nbsp;<input
+            type="submit"
+            value="Отправить"
+            disabled/>
+        </form><hr><br><br><br>
+
+		<form action="#" method="post" target="_blank">
+			<h2>Шаблон формы</h2>
+			<fieldset>
+			  <legend>Персональные данные</legend>
+			  <ul>
+				<li>
+				  <label for="name">Имя:*</label>
+				  <input type="text" name="name" placeholder="Иван Иванов" id="name" required>
+				</li>
+				<li>
+				  <label for="age">Возраст:</label>
+				  <input type="number" name="age" placeholder="27" id="age" min="0" max="125">
+				</li>
+			  </ul>
+			</fieldset>
+			<fieldset>
+			  <legend>Контакты</legend>
+			  <ul>
+				<li>
+				  <label for="email">E-mail:*</label>
+				  <input type="email" name="mail" placeholder="ivanov@gmail.com" id="email" required>
+				</li>
+				<li>
+				  <label for="number">Телефон:*</label>
+				  <input type="tel" name="phone" placeholder="+7 000 000-00-00" id="number" maxlength="21" required>
+				</li>
+			  </ul>
+			</fieldset>
+			<div>
+			  <label for="message">Увлечения</label>
+			  <textarea name="comment" placeholder="Расскажите обо всём, что для вас важно" id="message"></textarea>
+			</div>
+			<fieldset>
+			  <legend>Учёба</legend>
+			  <ul>
+				<li>
+				  <input type="checkbox" name="intensive-courses" id="courses" checked>
+				  <label for="courses">Прохожу курсы</label>
+				</li>
+				<li>
+				  <input type="checkbox" name="books" id="books">
+				  <label for="books">Читаю книги</label>
+				</li>
+				<li>
+				  <input type="checkbox" name="video" id="video">
+				  <label for="video">Смотрю видео</label>
+				</li>
+			  </ul>
+			</fieldset>
+			<fieldset>
+			  <legend>Предпочтения</legend>
+			  <ul>
+				<li>
+				  <input type="radio" name="preference" id="front" value="frontend" checked>
+				  <label for="front">Фронтенд-разработка</label>
+				</li>
+				<li>
+				  <input type="radio" name="preference" id="back" value="backend">
+				  <label for="back">Бэкенд-разработка</label>
+				</li>
+			  </ul>
+			</fieldset>
+			<div>
+			  <button type="submit">Отправить</button>
+			  <p>* — Обязательные поля</p>
+			</div>
+		  </form>
+      </body>
+    </html>
+  </body>
+</html>
